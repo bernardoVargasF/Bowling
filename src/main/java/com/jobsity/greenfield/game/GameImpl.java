@@ -3,7 +3,6 @@ package com.jobsity.greenfield.game;
 import java.util.List;
 import java.util.Map;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
 
@@ -34,8 +33,7 @@ public class GameImpl implements Game {
 			Player player = new Player(entry.getKey(), entry.getValue());
 			playersInputs.add(player);
 		}
-		// TODO remove getScores
-		this.getPinfalls(playersInputs);
+//		this.getPinfalls(playersInputs);
 		
 		return playersInputs;
 	}
@@ -69,10 +67,8 @@ public class GameImpl implements Game {
 			}
 			player.setPinfalls(pinfalls);
 			pinfallsSet.add(player);
-			System.out.println("Pinfalls " + player.getName() + ": " + Arrays.toString(pinfalls.toArray()));
 		}
-		// TODO remove getScores
-		this.getScores(pinfallsSet);
+//		this.getScores(pinfallsSet);
 		return pinfallsSet;
 	}
 	
@@ -133,10 +129,7 @@ public class GameImpl implements Game {
 			}
 			player.setScores(finalScore);
 			scoresSet.add(player);
-			System.out.println("Final Scores: " + Arrays.toString(finalScore.toArray()));
 		}
-		this.printScores(scoresSet);
-		
 		return scoresSet;
 	}
 	
